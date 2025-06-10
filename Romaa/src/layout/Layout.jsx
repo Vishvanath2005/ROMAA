@@ -1,0 +1,552 @@
+import React, { useState } from "react";
+import Headers from "./Headers";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
+import { RiCalendarScheduleLine, RiDashboardLine } from "react-icons/ri";
+import { TbFileDelta } from "react-icons/tb";
+import { LuUserRoundSearch } from "react-icons/lu";
+import { BsCart3 } from "react-icons/bs";
+import { HiOutlineClipboardList } from "react-icons/hi";
+import { LiaClipboardListSolid } from "react-icons/lia";
+import { TbLockDollar } from "react-icons/tb";
+import { TbDatabaseDollar } from "react-icons/tb";
+import { LuLandPlot } from "react-icons/lu";
+import { LuNotebookText } from "react-icons/lu";
+import { TbReportMoney } from "react-icons/tb";
+import { TbReportAnalytics } from "react-icons/tb";
+import { FiSettings } from "react-icons/fi";
+import { AiOutlineFileAdd } from "react-icons/ai";
+import { LuFileText } from "react-icons/lu";
+import { RiBankLine } from "react-icons/ri";
+import { TbCards } from "react-icons/tb";
+import { MdLocalAtm } from "react-icons/md";
+import { LuFileUser } from "react-icons/lu";
+import { TbDoorExit } from "react-icons/tb";
+import { LuScrollText } from "react-icons/lu";
+import { TbContract } from "react-icons/tb";
+import {
+  FileText,
+  ClipboardList,
+  FileWarning,
+  Workflow,
+  Banknote,
+  Quote,
+} from "lucide-react";
+import { BookUser } from "lucide-react";
+import { ScrollText } from "lucide-react";
+import { TbReceipt2 } from "react-icons/tb";
+import { IoCartOutline } from "react-icons/io5";
+import { MdContentPasteSearch } from "react-icons/md";
+import { LuGlassWater } from "react-icons/lu";
+import { LuWorkflow } from "react-icons/lu";
+import { RiBillLine } from "react-icons/ri";
+import { TbFileDollar } from "react-icons/tb";
+import { TbFileInvoice } from "react-icons/tb";
+import { TbFileOrientation } from "react-icons/tb";
+import { RiDiscountPercentLine } from "react-icons/ri";
+import { LuCalendar1 } from "react-icons/lu";
+import { TbBrandSurfshark } from "react-icons/tb";
+import { PiBoundingBoxBold } from "react-icons/pi";
+import { RiNodeTree } from "react-icons/ri";
+import { TbCalendarStats } from "react-icons/tb";
+import { AiOutlineFileDone } from "react-icons/ai";
+import { GrInProgress } from "react-icons/gr";
+import { GiHoneycomb } from "react-icons/gi";
+import { RiUserAddLine } from "react-icons/ri";
+import { GrGroup } from "react-icons/gr";
+import { RiGroupLine } from "react-icons/ri";
+import { TbShieldLock } from "react-icons/tb";
+import { TbShieldCheckered } from "react-icons/tb";
+import { RiShareBoxLine } from "react-icons/ri";
+import { HiOutlineCash } from "react-icons/hi";
+import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
+const LayOut = () => {
+  const location = useLocation();
+
+  const Menus = [
+    {
+      title: "Dashboard",
+      icon: <RiDashboardLine size={23} />,
+      to: "/dashboard",
+    },
+    {
+      title: "Tender",
+      icon: <TbFileDelta size={23} />,
+      to: "/tender/customers",
+      nested: [
+        {
+          title: "Clients",
+          icon: <LuUserRoundSearch size={23} />,
+          to: "/tender/customers",
+        },
+        {
+          title: "Tenders",
+          icon: <HiOutlineClipboardList size={23} />,
+          to: "/tender/tenders",
+        },
+        {
+          title: "Workorders",
+          icon: <LiaClipboardListSolid size={23} />,
+          to: "/tender/workorders",
+        },
+        {
+          title: "EMD",
+          icon: <TbLockDollar size={23} />,
+          to: "/tender/emd",
+        },
+        {
+          title: "Security Deposit",
+          icon: <TbShieldLock size={23} />,
+          to: "/tender/securitydeposit",
+        },
+        {
+          title: "Project Penalty",
+          icon: <TbShieldCheckered size={23} />,
+          to: "/tender/projectpenalty",
+        },
+        {
+          title: "DLP",
+          icon: <TbDatabaseDollar size={23} />,
+          to: "/tender/dlp",
+        },
+      ],
+    },
+    {
+      title: "Projects",
+      icon: <HiOutlineClipboardList size={23} />,
+      to: "/projects",
+          nested: [
+        {
+          title: "Zero Cost",
+          icon: <RiDiscountPercentLine size={23} />,
+          to: "/projects/zerocost",
+        },
+        {
+          title: "Detailed Estimate",
+          icon: <HiOutlineClipboardList size={23} />,
+          to: "/projects/detailestimate",
+        },
+        {
+          title: "Drawing vs BOQ",
+          icon: <PiBoundingBoxBold size={23} />,
+          to: "/projects/drawingboq",
+        },
+        {
+          title: "WBS",
+          icon: <RiNodeTree size={23} />,
+          to: "/projects/wbs",
+        },
+        {
+          title: "Schedule",
+          icon: <TbCalendarStats size={23} />,
+          // to: "/projects/schedule",
+        },
+        {
+          title: "WOR / WO issuance",
+          icon: <AiOutlineFileDone size={23} />,
+          // to: "/projects/woissuance",
+        },
+        {
+          title: "Client Billing",
+          icon: <TbReceipt2 size={23} />,
+          // to: "/projects/clientbilling",
+        },
+        {
+          title: "Work Progress",
+          icon: <GrInProgress size={23} />,
+          // to: "/projects/workprogress",
+        },
+     
+      ],
+    },
+    {
+      title: "Purchase",
+      icon: <BsCart3 size={23} />,
+      to: "/purchase/vendorsupplier",
+      nested: [
+        {
+          title: "Vendor & Supplier",
+          icon: <BookUser size={23} />,
+          to: "/purchase/vendorsupplier",
+        },
+        {
+          title: "Purchase Requests",
+          icon: <AiOutlineFileAdd size={23} />,
+          to: "/purchase/request",
+        },
+        {
+          title: "Purchase Enquiry",
+          icon: <LiaClipboardListSolid size={23} />,
+          to: "/purchase/enquiry",
+        },
+        {
+          title: "Purchase Order",
+          icon: <ScrollText size={23} />,
+          to: "/purchase/order",
+        },
+        {
+          title: "Goods Receipt",
+          icon: <TbReceipt2 size={23} />,
+          to: "/purchase/goodsreceipt",
+        },
+        {
+          title: "Purchase Bill",
+          icon: <IoCartOutline size={23} />,
+          to: "/purchase/bill",
+        },
+        {
+          title: "Machinery Tracking",
+          icon: <MdContentPasteSearch size={23} />,
+          to: "/purchase/machinerytracking",
+        },
+      ],
+    },
+  {
+      title: "Site",
+      icon: <LuLandPlot size={23} />,
+      to: "/site",
+      nested: [
+        {
+          title: "BOQ Site",
+          icon: <RiDiscountPercentLine size={23} />,
+          to: "/site/boqsite",
+        },
+         {
+          title: "Detailed Estimate ",
+          icon: <AiOutlineFileAdd size={23} />,
+          to: "/site/detailestimatesite",
+        },
+         {
+          title: "Site Drawing",
+          icon: <RiDiscountPercentLine size={23} />,
+          to: "/site/sitedrawing",
+        },
+         {
+          title: "Schedule",
+          icon: <RiCalendarScheduleLine size={23} />,
+          //to: "/site/sitedrawing",
+        },
+         {
+          title: "Work Done",
+          icon: <RiDiscountPercentLine size={23} />,
+          to: "/site/workDoneSite",
+        },
+         {
+          title: "Daily Labour Report",
+          icon: <RiDiscountPercentLine size={23} />,
+          to: "/site/dialylabourreport",
+        },
+         {
+          title: "Material Received",
+          icon: <RiDiscountPercentLine size={23} />,
+          to: "/site/materialrecievedsite",
+        },
+         {
+          title: "Material Issued",
+          icon: <RiDiscountPercentLine size={23} />,
+          to: "/site/materialissuedsite",
+        },
+         {
+          title: "Stock Register",
+          icon: <RiDiscountPercentLine size={23} />,
+          to: "/site/stockregistersite",
+        },
+         {
+          title: "Purchase Request",
+          icon: <RiDiscountPercentLine size={23} />,
+          to: "/site/purchaserequestsite",
+        },
+        {
+          title: "Site Assets",
+          icon: <RiDiscountPercentLine size={23} />,  
+          to: "/site/siteassets",
+        },
+        {
+          title: "Weekly Billing",
+          icon: <RiDiscountPercentLine size={23} />,  
+          to: "/site/weeklybillingsite",
+        }
+      ],
+    },
+    {
+      title: "HR",
+      icon: <LuNotebookText size={23} />,
+      to: "/hr/employee",
+      nested: [
+        {
+          title: "Employee",
+          icon: <AiOutlineFileAdd size={23} />,
+          to: "/hr/employee",
+        },
+        {
+          title: "Attendance",
+          icon: <LuFileUser size={23} />,
+          to: "/hr/attendance",
+        },
+        {
+          title: "Leave",
+          icon: <TbDoorExit size={23} />,
+          to: "/hr/leave",
+        },
+        {
+          title: "Payroll",
+          icon: <LuScrollText size={23} />,
+          to: "/hr/payroll",
+        },
+        {
+          title: "Contract & NMR",
+          icon: <TbContract size={23} />,
+          to: "/hr/contractnmr",
+        },
+      ],
+    },
+    {
+      title: "Finance",
+      icon: <TbReportMoney size={23} />,
+      to: "/finance/clientbilling",
+      nested: [
+        {
+          title: "Client Billing",
+          icon: <FileText size={23} />,
+          to: "/finance/clientbilling",
+        },
+        {
+          title: "Purchase Bill",
+          icon: <ClipboardList size={23} />,
+          to: "/finance/purchasetotalbill",
+        },
+        {
+          title: "Debit, Credit Note",
+          icon: <FileWarning size={23} />,
+          to: "/finance/debitcreditnote",
+        },
+        {
+          title: "Bank Transcation",
+          icon: <TbReportMoney size={23} />,
+          to: "/finance/banktransaction",
+        },
+        {
+          title: "Journal Entry",
+          icon: <Workflow size={23} />,
+          to: "/finance/journalentry",
+        },
+        {
+          title: "GST P&L",
+          icon: <LuFileText size={23} />,
+          to: "/finance/gst",
+        },
+        {
+          title: "Banks",
+          icon: <RiBankLine size={23} />,
+          to: "/finance/banks",
+        },
+        {
+          title: "TDS",
+          icon: <TbCards size={23} />,
+          to: "/finance/tds",
+        },
+        {
+          title: "Cash Entry",
+          icon: <MdLocalAtm size={23} />,
+          to: "/finance/cashentry",
+        },
+        {
+          title: "Supplier Outstanding",
+          icon: <Banknote size={23} />,
+          to: "/finance/supplieroutstanding",
+        },
+      ],
+    },
+ {
+      title: "Reports",
+      icon: <TbReportAnalytics size={23} />,
+      to: "/reports/projectdashboard",
+      nested: [
+        {
+          title: "Project Dashboard",
+          icon: <HiOutlineClipboardDocumentList  size={23} />,
+          to: "/reports/projectdashboard",
+        },
+         {
+          title: "Work Analysis",
+          icon: <LuWorkflow size={23} />,
+          to: "/reports/workanalysis",
+        }, {
+          title: "Client Billing",
+          icon: <RiBillLine RoundSearch size={23} />,
+          to: "/reports/clientbilling",
+        }, 
+        {
+          title: "Financial Report",
+          icon: <TbFileDelta   size={23} />,
+          to: "/reports/financialreport",
+        }, {
+          title: "P&L",
+          icon: <TbFileInvoice  size={23} />,
+          to: "/reports/p&l",
+        }, {
+          title: "Cash Flow",
+          icon: <HiOutlineCash size={23} />,
+          to: "/reports/cashflow",
+        },
+         {
+          title: "Expenses Report",
+          icon: <TbFileDollar  size={23} />,
+          to: "/reports/expensesreport",
+        }, {
+          title: "Vendor Report",
+          icon: <TbFileInvoice  size={23} />,
+          to: "/reports/vendorreport",
+        }, {
+          title: "Reconciliation",
+          icon: <TbFileOrientation  size={23} />,
+          to: "/reports/reconciliation",
+        }, {
+          title: "Actual vs Biller",
+          icon: <TbReceipt2  size={23} />,
+          to: "/reports/actualvsbilled",
+        }, {
+          title: "Cost to Complete",
+          icon: <RiDiscountPercentLine  size={23} />,
+          to: "/reports/costtocomplete",
+        }, {
+          title: "Schedule",
+          icon: <LuCalendar1  size={23} />,
+          to: "/reports/schedule",
+        },
+         {
+          title: "Planned Vs Actual",
+          icon: <Quote size={23} />,
+          to: "/reports/plannedvsactual",
+        }, {
+          title: "Labour Productivity",
+          icon: <GiHoneycomb size={23} />,
+          to: "/reports/labourproductivity",
+        }, {
+          title: "Machine Productivity",
+          icon: <LuGlassWater size={23} />,
+          to: "/reports/machineproductivity",
+        }, {
+          title: "Collection Projection",
+          icon: <RiShareBoxLine size={23} />,
+          to: "/reports/collectionprojection",
+        },
+      ],
+    },
+    {
+      title: "Settings",
+      icon: <FiSettings size={23} />,
+      to: "/settings/user",
+      nested: [
+        {
+          title: "User",
+          icon: <RiUserAddLine size={23} />,
+          to: "/settings/user",
+        },
+        {
+          title: "Roles",
+          icon: <GrGroup size={23} />,
+          to: "/settings/roles",
+        },
+        {
+          title: "Master",
+          icon: <RiGroupLine size={23} />,
+          to: "/settings/master",
+        },
+      ],
+    },
+  ];
+
+  const isMenuActive = (menu) => {
+    if (location.pathname.startsWith(menu.to)) {
+      return true;
+    }
+    if (
+      menu.nested &&
+      menu.nested.some((item) => location.pathname.startsWith(item.to))
+    ) {
+      return true;
+    }
+    return false;
+  };
+
+  return (
+    <div className=" font-roboto-flex w-full fixed h-screen ">
+      <Headers />
+      <div className="flex  bg-light-blue h-11/12 ">
+        <div className="px-6 bg-light-blue overflow-auto no-scrollbar ">
+          <ul>
+            {Menus.map((menu, index) => (
+              <React.Fragment key={index}>
+                <NavLink to={menu.to}>
+                  <li
+                    className={`w-[80px] text-sm font-extralight flex flex-col items-center gap-1 px-3 py-3 my-4 border border-border-sidebar rounded-xl ${
+                      isMenuActive(menu)
+                        ? " text-white  bg-darkest-blue "
+                        : " text-darkest-blue  "
+                    }`}
+                  >
+                    <span>{menu.icon}</span>
+                    <p>{menu.title}</p>
+                  </li>
+                </NavLink>
+              </React.Fragment>
+            ))}
+          </ul>
+        </div>
+        {Menus.map((menu, index) => {
+          const isNestedSidebarVisible = (menuTitle, pathname) => {
+            if (menuTitle === "Projects") {
+              return (
+                pathname.startsWith("/projects/") && pathname !== "/projects"
+              );
+            }
+
+            if (menuTitle === "Site") {
+              return pathname.startsWith("/site/") && pathname !== "/site";
+            }
+
+            return pathname.startsWith(`/${menuTitle.toLowerCase()}`);
+          };
+
+          const shouldShowSidebar =
+            menu.nested &&
+            isNestedSidebarVisible(menu.title, location.pathname);
+
+          return (
+            shouldShowSidebar &&
+            isMenuActive(menu) && (
+              <div
+                key={index}
+                className="mx-2 w-56 text-sm  my-4 rounded-lg bg-white overflow-auto no-scrollbar py-6"
+              >
+                <ul>
+                  {menu.nested.map((item, index) => (
+                    <li key={index} className="mb-2">
+                      <NavLink to={item.to}>
+                        <div
+                          className={`w-full   flex  items-center gap-2 py-3 px-3 cursor-pointer ${
+                            location.pathname.startsWith(item.to)
+                              ? "bg-select-subbar text-darkest-blue border-r-4 "
+                              : "text-darkest-blue"
+                          }`}
+                        >
+                          <span>{item.icon}</span>
+                          <p>{item.title}</p>
+                        </div>
+                      </NavLink>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )
+          );
+        })}
+        <div className="w-full  p-4 overflow-auto no-scrollbar ">
+          <Outlet />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default LayOut;

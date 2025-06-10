@@ -1,0 +1,348 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import LayOut from "../layout/Layout";
+import Dashboard from "../pages/dashboard/Dashboard";
+import Customer from "../pages/tender/clients/Clients";
+import Tender from "../pages/tender/tenders/Tender";
+import ViewTender from "../pages/tender/tenders/view tenders/ViewTender";
+import WorkOrder from "../pages/tender/work order/WorkOrder";
+import EMD from "../pages/tender/emd/EMD";
+import DLP from "../pages/tender/dlp/DLP";
+import Project from "../pages/projects/Project";
+import VendorSupplier from "../pages/purchase/Vendor & supplier/VendorSupplier";
+import PurchaseRequest from "../pages/purchase/purchase request/PurchaseRequest";
+import PurchaseEnquiry from "../pages/purchase/purchase enquiry/PurchaseEnquiry";
+import PurchaseOrder from "../pages/purchase/purchase order/PurchaseOrder";
+import GoodsReceipt from "../pages/purchase/goods receipt/GoodsReceipt";
+import PurchaseBill from "../pages/purchase/purchase bill/PurchaseBill";
+import MachineryTracking from "../pages/purchase/machinery tracking/MachineryTracking";
+import Site from "../pages/site/Site";
+import Employee from "../pages/Hr/employee/Employee";
+import Leave from "../pages/Hr/leave/Leave";
+import PayRoll from "../pages/Hr/payroll/PayRoll";
+import ContractNmr from "../pages/Hr/contract & Nmr/ContractNmr";
+import ViewEmployee from "../pages/Hr/employee/ViewEmployee";
+import EditEmployee from "../pages/Hr/employee/EditEmployee";
+import Attendance from "../pages/Hr/attendance/Attendance";
+import ClientBilling from "../pages/finanace/client_billing/ClientBilling";
+import Debit_CreditNote from "../pages/finanace/debit_creditnote/Debit_CreditNote";
+import BankTransactions from "../pages/finanace/bank_transactions/BankTransactions";
+import JournalEntry from "../pages/finanace/journal_entry/JournalEntry";
+import GST_PL from "../pages/finanace/gst_pl/GST_PL";
+import Banks from "../pages/finanace/banks/Banks";
+import TDS from "../pages/finanace/tds/TDS";
+import CashEntry from "../pages/finanace/cash_entry/CashEntry";
+import SupplierOutstanding from "../pages/finanace/supplier_outstanding/SupplierOutstanding";
+import PurchaseTotalBill from "../pages/finanace/purchase_bill/PurchaseTotalBill";
+import ZeroCost from "../pages/projects/zero cost/ZeroCost";
+import DetailedEstimate from "../pages/projects/Detailed estimate/DetailedEstimate";
+import ViewBoqSplit from "../pages/projects/zero cost/boq split/ViewBoqSplit";
+import BOQSite from "../pages/site/BOQSite/BOQSite";
+import DetailedEstimateSite from "../pages/site/DetailedEstimateSite/DetailedEstimateSite";
+import ViewGS from "../pages/site/DetailedEstimateSite/GS/ViewGS";
+import EditRateAnalysis from "../pages/projects/zero cost/Rate analysis/EditRateAnalysis";
+import ViewGs from "../pages/projects/Detailed estimate/general abstract/ViewGs";
+import ViewBillQtyProject from "../pages/projects/Detailed estimate/BOQProjects/ViewBOQProject";
+import ViewNewInletDet from "../pages/projects/Detailed estimate/new inlet det/ViewNewInletDet";
+import ViewNewInletAbs from "../pages/projects/Detailed estimate/new inlet abs/ViewNewInletAbs";
+import ViewRoadDetailed from "../pages/projects/Detailed estimate/road detailed/ViewRoadDetailed";
+import ViewRoadAbstract from "../pages/projects/Detailed estimate/road abstract/ViewRoadAbstract";
+import ViewRetainingWall from "../pages/projects/Detailed estimate/retaining wall/ViewRetainingWall";
+import DrawingBoq from "../pages/projects/drawing vs Boq/DrawingBoq";
+import ViewDrawingBoq from "../pages/projects/drawing vs Boq/ViewDrawingBoq";
+import WBS from "../pages/projects/WBQ/WBS";
+import ViewWbs from "../pages/projects/WBQ/ViewWbs";
+import ViewRetainingAbstract from "../pages/projects/Detailed estimate/retaining abstract/ViewRetainingAbstract";
+import ViewVendorProject from "../pages/projects/Detailed estimate/vendor/ViewVendorProjects";
+import ViewWorkOrder from "../pages/tender/work order/view work order/ViewWorkOrder";
+import ViewCalendar from "../pages/dashboard/ViewCalendar";
+import Login from "../pages/auth/Login";
+import ForgotPassword from "../pages/auth/ForgotPassword";
+import User from "../pages/settings/user/User";
+import EditUser from "../pages/settings/user/EditUser";
+import Roles from "../pages/settings/roles/Roles";
+import Master from "../pages/settings/master/Master";
+import AddRoles from "../pages/settings/roles/AddRoles";
+import EditRoles from "../pages/settings/roles/EditRoles";
+import SecurityDeposit from "../pages/tender/security deposit/SecurityDeposit";
+import ProjectPenalty from "../pages/tender/project penalty/ProjectPenalty";
+import ViewVendorSupplier from "../pages/purchase/Vendor & supplier/view vendor supplier/ViewVendorSupplier";
+import ViewPurchaseRequest from "../pages/purchase/purchase request/ViewPurchaseRequest";
+import ViewPurchaseOrder from "../pages/purchase/purchase order/ViewPurchaseOrder";
+import ViewBillQtySite from "../pages/site/DetailedEstimateSite/BillQty/viewBillQtySite";
+import ViewNewInletSite from "../pages/site/DetailedEstimateSite/NewInletDetSite/viewNewInletSite";
+import ViewNewInletAbsSite from "../pages/site/DetailedEstimateSite/NewInletAbsSite/ViewNewInletAbs";
+import SiteDrawing from "../pages/site/SiteDrawing/SiteDrawing";
+import ViewSiteDrawing from "../pages/site/SiteDrawing/ViewSiteDrawing";
+import WorkDoneSite from "../pages/site/WorkDone/WorkDoneSite";
+import DailyLabourReport from "../pages/site/DailyLabourReport/DailyLabourReport";
+import ViewDialyReportSite from "../pages/site/DailyLabourReport/ViewDialyReportSite";
+import MaterialRecievedSite from "../pages/site/MaterialRecieved/MaterialRecievedSite";
+import ViewMaterialRecieved from "../pages/site/MaterialRecieved/ViewMaterialRecieved";
+import MaterialIssue from "../pages/site/MaterialIsuued/MaterialIssue";
+import ViewMaterialIssue from "../pages/site/MaterialIsuued/ViewMaterialIssue";
+import StockRegister from "../pages/site/StockRegister/StockRegister";
+import ViewStockRegisterSite from "../pages/site/StockRegister/ViewStockRegisterSite";
+import PurchaseRequestSite from "../pages/site/PurchaseRequest/PurchaseRequestSite";
+import ViewPurchaseRequestSite from "../pages/site/PurchaseRequest/ViewPurchaseRequestSite";
+import SiteAsset from "../pages/site/SiteAssest/SiteAsset";
+import ViewSiteAssest from "../pages/site/SiteAssest/ViewSiteAssest";
+import WeeklyBilling from "../pages/site/WeeklyBilling/WeeklyBilling";
+import ProjectDashboard from "../pages/reports/project_dashboard/ProjectDashboard";
+import WorkAnalysis from "../pages/reports/work_analysis/WorkAnalysis";
+import ClientBilling_Report from "../pages/reports/client_billing/ClientBilling_Report";
+import FinancialReport from "../pages/reports/financial_report/FinancialReport";
+import ExpensesReport from "../pages/reports/expenses_report/ExpensesReport";
+import VendorReport from "../pages/reports/vendor_report/VendorReport";
+import Reconciliation from "../pages/reports/reconciliation/Reconciliation";
+import ActualvsBilled from "../pages/reports/actual_vs_billed/ActualvsBilled";
+import CosttoComplete from "../pages/reports/cost_to_complete/CosttoComplete";
+import Schedule from "../pages/reports/schedule/Schedule";
+import P_L from "../pages/reports/p&l/P_L";
+import CashFlow from "../pages/reports/cash_flow/CashFlow";
+import PlannedvsAcutal from "../pages/reports/planned_vs_actual/PlannedvsAcutal";
+import LabourProductivity from "../pages/reports/labour_productiviy/LabourProductivity";
+import MachineProductivity from "../pages/reports/machine_productivity/MachineProductivity";
+import CollectionProjection from "../pages/reports/collection_projection/CollectionProjection";
+import ViewWorkAnalysis from "../pages/reports/work_analysis/ViewWorkAnalysis";
+import ViewClientBilling from "../pages/reports/client_billing/ViewClientBilling";
+import ViewFinancialReport from "../pages/reports/financial_report/ViewFinancialReport";
+
+const AppRoutes = () => {
+  return (
+    <>
+      {" "}
+      <BrowserRouter>
+        <Routes>
+          <Route path="" element={<Login />} />
+          <Route path="/forgotpassword" element={<ForgotPassword />} />
+          <Route path="/" element={<LayOut />}>
+            <Route path="/dashboard">
+              <Route index element={<Dashboard />} />
+              <Route path="viewcalendar" element={<ViewCalendar />} />
+            </Route>
+            <Route path="/tender">
+              <Route path="customers" element={<Customer />} />
+              <Route path="tenders">
+                <Route index element={<Tender />} />
+                <Route path="viewtender" element={<ViewTender />} />
+              </Route>
+              <Route path="workorders">
+                <Route index element={<WorkOrder />} />
+                <Route path="viewworkorder" element={<ViewWorkOrder />} />
+              </Route>
+              <Route path="emd" element={<EMD />} />
+              <Route path="dlp" element={<DLP />} />
+              <Route path="securitydeposit" element={<SecurityDeposit />} />
+              <Route path="projectpenalty" element={<ProjectPenalty />} />
+            </Route>
+            <Route path="/projects">
+              <Route index element={<Project />} />
+              <Route path="zerocost">
+                <Route index element={<ZeroCost />} />
+                <Route path="viewboqsplit" element={<ViewBoqSplit />} />
+                <Route path="editrateanalysis" element={<EditRateAnalysis />} />
+              </Route>
+              <Route path="detailestimate">
+                <Route index element={<DetailedEstimate />} />
+                <Route path="viewgs" element={<ViewGs />} />
+                <Route path="viewboqproject" element={<ViewBillQtyProject />} />
+                <Route path="viewnewinletdet" element={<ViewNewInletDet />} />
+                <Route path="viewnewinletabs" element={<ViewNewInletAbs />} />
+                <Route path="viewroaddetailed" element={<ViewRoadDetailed />} />
+                <Route path="viewroadabstract" element={<ViewRoadAbstract />} />
+                <Route
+                  path="viewretainingwall"
+                  element={<ViewRetainingWall />}
+                />
+                <Route
+                  path="viewretainingabstract"
+                  element={<ViewRetainingAbstract />}
+                />
+                <Route
+                  path="viewvendorproject"
+                  element={<ViewVendorProject />}
+                />
+              </Route>
+              <Route path="drawingboq">
+                <Route index element={<DrawingBoq />} />
+                <Route path="viewdrawingboq" element={<ViewDrawingBoq />} />
+              </Route>
+              <Route path="wbs">
+                <Route index element={<WBS />} />
+                <Route path="viewwbs" element={<ViewWbs />} />
+              </Route>
+            </Route>
+            <Route path="/purchase">
+              <Route path="vendorsupplier">
+                <Route index element={<VendorSupplier />} />
+                <Route
+                  path="viewvendorsupplier"
+                  element={<ViewVendorSupplier />}
+                />
+              </Route>
+              <Route path="request">
+                <Route index element={<PurchaseRequest />} />
+                <Route
+                  path="viewpurchaserequest"
+                  element={<ViewPurchaseRequest />}
+                />
+              </Route>
+              <Route path="enquiry" element={<PurchaseEnquiry />} />
+              <Route path="order">
+                <Route index element={<PurchaseOrder />} />
+                <Route
+                  path="viewpurchaseorder"
+                  element={<ViewPurchaseOrder />}
+                />
+              </Route>
+              <Route path="goodsreceipt" element={<GoodsReceipt />} />
+              <Route path="bill" element={<PurchaseBill />} />
+              <Route path="machinerytracking" element={<MachineryTracking />} />
+            </Route>
+            <Route path="/site">
+              <Route index element={<Site />} />
+              <Route path="boqsite" element={<BOQSite />} />
+              <Route path="detailestimatesite">
+                <Route index element={<DetailedEstimateSite />} />
+                <Route path="viewSE" element={<ViewGS />} />
+                <Route path="viewBillQty" element={<ViewBillQtySite />} />
+                <Route path="viewNewInlet" element={<ViewNewInletSite />} />
+                <Route
+                  path="viewNewInletAbs"
+                  element={<ViewNewInletAbsSite />}
+                />
+              </Route>
+              <Route path="sitedrawing">
+                <Route index element={<SiteDrawing />} />
+                <Route path="viewdrawing" element={<ViewSiteDrawing />} />
+              </Route>
+              <Route path="workDoneSite" element={<WorkDoneSite />} />
+              <Route path="dialylabourreport">
+                <Route index element={<DailyLabourReport />} />
+                <Route
+                  path="viewdailylabourReport"
+                  element={<ViewDialyReportSite />}
+                />
+              </Route>
+              <Route path="materialrecievedsite">
+                <Route index element={<MaterialRecievedSite />} />
+                <Route
+                  path="viewmaterialrecieved"
+                  element={<ViewMaterialRecieved />}
+                />
+              </Route>
+              <Route path="materialissuedsite">
+                <Route index element={<MaterialIssue />} />
+                <Route
+                  path="viewmaterialissued"
+                  element={<ViewMaterialIssue />}
+                />
+              </Route>
+              <Route path="stockregistersite">
+                <Route index element={<StockRegister />} />
+                <Route
+                  path="viewstockregistersite"
+                  element={<ViewStockRegisterSite />}
+                />
+              </Route>
+              <Route path="purchaserequestsite">
+                <Route index element={<PurchaseRequestSite />} />
+                <Route
+                  path="viewpurchaserequestsite"
+                  element={<ViewPurchaseRequestSite />}
+                />
+              </Route>
+              <Route path="siteassets">
+                <Route index element={<SiteAsset />} />
+                <Route path="viewsiteassest" element={<ViewSiteAssest />} />
+              </Route>
+              <Route path="weeklybillingsite" element={<WeeklyBilling />} />
+            </Route>
+            <Route path="/hr">
+              <Route path="employee">
+                <Route index element={<Employee />} />
+                <Route path="viewemployee" element={<ViewEmployee />} />
+                <Route path="editemployee" element={<EditEmployee />} />
+              </Route>
+              <Route path="attendance" element={<Attendance />} />
+              <Route path="leave" element={<Leave />} />
+              <Route path="payroll" element={<PayRoll />} />
+              <Route path="contractnmr" element={<ContractNmr />} />
+            </Route>
+            <Route path="/finance">
+              <Route path="clientbilling" element={<ClientBilling />} />
+              <Route path="purchasetotalbill" element={<PurchaseTotalBill />} />
+              <Route path="debitcreditnote" element={<Debit_CreditNote />} />
+              <Route path="banktransaction" element={<BankTransactions />} />
+              <Route path="journalentry" element={<JournalEntry />} />
+              <Route path="gst" element={<GST_PL />} />
+              <Route path="banks" element={<Banks />} />
+              <Route path="tds" element={<TDS />} />
+              <Route path="cashentry" element={<CashEntry />} />
+              <Route
+                path="supplieroutstanding"
+                element={<SupplierOutstanding />}
+              />
+            </Route>
+             <Route path="/reports">
+              <Route path="projectdashboard" element={<ProjectDashboard />} />
+              <Route path="workanalysis">
+                <Route index element={<WorkAnalysis />} />
+                <Route path="viewworkanalysis" element={<ViewWorkAnalysis />} />
+              </Route>
+              <Route path="clientbilling">
+                <Route index element={<ClientBilling_Report />} />
+                <Route
+                  path="viewclientbilling"
+                  element={<ViewClientBilling />}
+                />
+              </Route>
+               <Route path="financialreport">
+                <Route index element={<FinancialReport />} />
+                <Route
+                  path="viewfinancialreport"
+                  element={<ViewFinancialReport />}
+                />
+              </Route>
+              <Route path="p&l" element={<P_L />} />
+              <Route path="cashflow" element={<CashFlow />} />
+              <Route path="expensesreport" element={<ExpensesReport />} />
+              <Route path="vendorreport" element={<VendorReport />} />
+              <Route path="reconciliation" element={<Reconciliation />} />
+              <Route path="actualvsbilled" element={<ActualvsBilled />} />
+              <Route path="costtocomplete" element={<CosttoComplete />} />
+              <Route path="schedule" element={<Schedule />} />
+              <Route path="plannedvsactual" element={<PlannedvsAcutal />} />
+              <Route
+                path="labourproductivity"
+                element={<LabourProductivity />}
+              />
+              <Route
+                path="machineproductivity"
+                element={<MachineProductivity />}
+              />
+              <Route
+                path="collectionprojection"
+                element={<CollectionProjection />}
+              />
+            </Route>
+            <Route path="/settings">
+              <Route path="user">
+                <Route index element={<User />} />
+                <Route path="edituser" element={<EditUser />} />
+              </Route>
+              <Route path="roles">
+                <Route index element={<Roles />} />
+                <Route path="editroles" element={<EditRoles />} />
+                <Route path="addroles" element={<AddRoles />} />
+              </Route>
+              <Route path="master" element={<Master />} />
+            </Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
+};
+
+export default AppRoutes;
