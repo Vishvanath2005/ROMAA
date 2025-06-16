@@ -106,6 +106,10 @@ import CollectionProjection from "../pages/reports/collection_projection/Collect
 import ViewWorkAnalysis from "../pages/reports/work_analysis/ViewWorkAnalysis";
 import ViewClientBilling from "../pages/reports/client_billing/ViewClientBilling";
 import ViewFinancialReport from "../pages/reports/financial_report/ViewFinancialReport";
+import Tickets from "../pages/dashboard/tickets/Tickets";
+import Profile from "../pages/dashboard/profile/Profile";
+import ContractorBill from "../pages/finanace/contractor_bill/ContractorBill";
+import InternalBankTransfer from "../pages/finanace/internal_bank_transfer/InternalBankTransfer";
 
 const AppRoutes = () => {
   return (
@@ -119,6 +123,8 @@ const AppRoutes = () => {
             <Route path="/dashboard">
               <Route index element={<Dashboard />} />
               <Route path="viewcalendar" element={<ViewCalendar />} />
+              <Route path="tickets" element={<Tickets />} />
+              <Route path="profile" element={<Profile />} />
             </Route>
             <Route path="/tender">
               <Route path="customers" element={<Customer />} />
@@ -272,6 +278,8 @@ const AppRoutes = () => {
             <Route path="/finance">
               <Route path="clientbilling" element={<ClientBilling />} />
               <Route path="purchasetotalbill" element={<PurchaseTotalBill />} />
+              <Route path="contractorbill" element={<ContractorBill />} />
+              <Route path="internalbanktransfer" element={<InternalBankTransfer />} />
               <Route path="debitcreditnote" element={<Debit_CreditNote />} />
               <Route path="banktransaction" element={<BankTransactions />} />
               <Route path="journalentry" element={<JournalEntry />} />

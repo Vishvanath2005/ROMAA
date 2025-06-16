@@ -5,6 +5,7 @@ import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
 const DonutChart = ({
   title,
   data = [],
+  project_name=true,
   colors = [],
   height = 180,
   outerRadius = 70,
@@ -20,7 +21,7 @@ const DonutChart = ({
         <h3 className="font-semibold">{title}</h3>
 
         <div className="relative w-36  text-sm">
-          <button
+         {project_name &&  <button
             onClick={() => setIsOpen((prev) => !prev)}
             className="w-full h-10 flex justify-between items-center pl-3 border border-[#cdd3ff] rounded-md  text-gray-600"
           >
@@ -31,7 +32,7 @@ const DonutChart = ({
                 size={18}
               />
             </span>
-          </button>
+          </button>}
           {isOpen && (
             <ul className="absolute z-10 mt-1 w-full bg-white border border-[#cdd3ff] rounded-md shadow text-gray-700">
               {options.map((option) => (

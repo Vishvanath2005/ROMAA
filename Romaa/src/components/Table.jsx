@@ -27,6 +27,7 @@ const Table = ({
   deletetitle,
   FilterModal,
   exportModal = true,
+  active_title,
   title,
   subtitle,
   pagetitle,
@@ -62,7 +63,6 @@ const Table = ({
     setCurrentPage(1);
   };
 
-  // Sorting logic
   const sortedItems = useMemo(() => {
     let sortableItems = [...endpoint];
 
@@ -82,7 +82,12 @@ const Table = ({
   return (
     <div className="font-roboto-flex flex flex-col h-full">
       <div className="lg:flex lg:justify-between">
-        <Title title={title} sub_title={subtitle} page_title={pagetitle} />
+        <Title
+          title={title}
+          sub_title={subtitle}
+          active_title={active_title}
+          page_title={pagetitle}
+        />
         <div className="my-2 flex flex-wrap items-center gap-2">
           {Datecontent && (
             <p className="font-semibold ">
@@ -265,6 +270,7 @@ const Table = ({
                             <LuEye size={14} className="text-[#008000]" />
                           </button>
                         )}
+
                         {DeleteModal && (
                           <button
                             onClick={() => {

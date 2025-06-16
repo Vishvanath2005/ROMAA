@@ -5,9 +5,11 @@ import { HiOutlineBell } from "react-icons/hi";
 import { useSearch } from "../components/SearchBar";
 import ThemeToggle from "../components/ThemeToggle";
 import { HiOutlineTicket } from "react-icons/hi";
+import { useNavigate } from "react-router-dom";
 
 const Headers = () => {
   const { searchTerm, setSearchTerm } = useSearch();
+  const navigate = useNavigate();
   return (
     <div className=" w-full z-10 font-roboto-flex flex justify-between items-center dark:bg-white pt-2 px-2 h-1/12">
       <div className="flex gap-4  ">
@@ -27,7 +29,8 @@ const Headers = () => {
         <div className=" flex  items-center gap-2 text-sm font-extralight text-nowrap text-darkest-blue ">
           Profile name
           <div className="">
-            <button className="bg-light-blue text-darkest-blue font-medium w-9 h-9 text-sm rounded-full flex items-center justify-center">
+            <button className="bg-light-blue text-darkest-blue font-medium w-9 h-9 text-sm rounded-full flex items-center justify-center"
+            onClick={()=>{navigate('/dashboard/profile')}}>
               KA
             </button>
           </div>
@@ -35,7 +38,8 @@ const Headers = () => {
         <p className="bg-light-blue w-9 h-9 lg:p-2 md:p-2 p-1.5 rounded-full">
           <HiOutlineBell className=" size-5 text-darkest-blue" />
         </p>
-        <p className="bg-light-blue w-9 h-9 lg:p-2 md:p-2 p-1.5 rounded-full">
+        <p className="bg-light-blue w-9 h-9 lg:p-2 md:p-2 p-1.5 rounded-full"
+        onClick={()=>{navigate('/dashboard/tickets')}}>
           <HiOutlineTicket className=" size-5 text-darkest-blue" />
         </p>
 

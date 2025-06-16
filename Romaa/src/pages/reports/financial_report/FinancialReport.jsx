@@ -18,7 +18,7 @@ const FinancialReport = () => {
   return (
     <div className="font-roboto-flex flex flex-col ">
       <Table
-        title="Report"
+        title="Dashboard"
         subtitle="Financial Report"
         pagetitle="Financial Report"
         endpoint={financialreportData}

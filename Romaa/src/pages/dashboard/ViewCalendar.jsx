@@ -11,6 +11,7 @@ import { useNavigate } from "react-router-dom";
 import Title from "../../components/Title";
 import Button from "../../components/Button";
 import { TbCalendarDue } from "react-icons/tb";
+import AddEvents from "./AddEvents";
 
 const Projectsdata = [
   { date: "2025-04-06", status: "Completed", name: "Foundation Work" },
@@ -27,8 +28,7 @@ const Projectsdata = [
   { date: "2025-05-02", status: "Work in progress", name: "Plastering" },
   { date: "2025-05-02", status: "Completed", name: "Flooring" },
   { date: "2025-05-15", status: "Work in progress", name: "Painting" },
-    // { date: "2025-05-03", status: "Completed", name: "Flooring" },
-    { date: "2025-05-03", status: "Work in progress", name: "Flooring" },
+  { date: "2025-05-03", status: "Work in progress", name: "Flooring" },
 ];
 
 const statuses = {
@@ -45,7 +45,7 @@ const ViewCalendar = () => {
   const navigate = useNavigate();
   const [selectedYear, setSelectedYear] = useState(2025);
   const [selectedMonth, setSelectedMonth] = useState(3);
-
+  const [addEvents, setAddEvents] = useState();
   const currentMonth = new Date(selectedYear, selectedMonth);
   const start = startOfMonth(currentMonth);
   const end = endOfMonth(currentMonth);
@@ -89,12 +89,12 @@ const ViewCalendar = () => {
             bgColor="bg-white"
             textColor="text-darkest-blue"
             button_icon={<TbCalendarDue size={23} />}
+            onClick={()=>{setAddEvents(true)}}
           />
         </div>
       </div>
       <div className="flex   text-black  ">
         <div className="w-2/3 px-1 ">
-          {/* Month & Year Select */}
           <div className="flex justify-between my-1 bg-white  rounded-md px-2 py-2 items-center ">
             <div className="space-x-2">
               <select
@@ -124,8 +124,6 @@ const ViewCalendar = () => {
 
             <span className="text-sm text-gray-400">Time zone</span>
           </div>
-
-          {/* Calendar Grid */}
           <div className="grid grid-cols-7 gap-1 text-center ">
             {["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map((day) => (
               <div key={day} className="text-sm bg-white rounded-md p-4 ">
@@ -228,6 +226,11 @@ const ViewCalendar = () => {
           <IoArrowBackSharp /> back
         </p>
       </div>
+      {addEvents && (
+        <>
+          <AddEvents onclose={()=>{setAddEvents(false)}}   />
+        </>
+      )}
     </>
   );
 };

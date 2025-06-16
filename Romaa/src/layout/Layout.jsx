@@ -114,7 +114,7 @@ const LayOut = () => {
       title: "Projects",
       icon: <HiOutlineClipboardList size={23} />,
       to: "/projects",
-          nested: [
+      nested: [
         {
           title: "Zero Cost",
           icon: <RiDiscountPercentLine size={23} />,
@@ -155,7 +155,6 @@ const LayOut = () => {
           icon: <GrInProgress size={23} />,
           // to: "/projects/workprogress",
         },
-     
       ],
     },
     {
@@ -200,7 +199,7 @@ const LayOut = () => {
         },
       ],
     },
-  {
+    {
       title: "Site",
       icon: <LuLandPlot size={23} />,
       to: "/site",
@@ -210,61 +209,61 @@ const LayOut = () => {
           icon: <RiDiscountPercentLine size={23} />,
           to: "/site/boqsite",
         },
-         {
+        {
           title: "Detailed Estimate ",
           icon: <AiOutlineFileAdd size={23} />,
           to: "/site/detailestimatesite",
         },
-         {
+        {
           title: "Site Drawing",
           icon: <RiDiscountPercentLine size={23} />,
           to: "/site/sitedrawing",
         },
-         {
+        {
           title: "Schedule",
           icon: <RiCalendarScheduleLine size={23} />,
           //to: "/site/sitedrawing",
         },
-         {
+        {
           title: "Work Done",
           icon: <RiDiscountPercentLine size={23} />,
           to: "/site/workDoneSite",
         },
-         {
+        {
           title: "Daily Labour Report",
           icon: <RiDiscountPercentLine size={23} />,
           to: "/site/dialylabourreport",
         },
-         {
+        {
           title: "Material Received",
           icon: <RiDiscountPercentLine size={23} />,
           to: "/site/materialrecievedsite",
         },
-         {
+        {
           title: "Material Issued",
           icon: <RiDiscountPercentLine size={23} />,
           to: "/site/materialissuedsite",
         },
-         {
+        {
           title: "Stock Register",
           icon: <RiDiscountPercentLine size={23} />,
           to: "/site/stockregistersite",
         },
-         {
+        {
           title: "Purchase Request",
           icon: <RiDiscountPercentLine size={23} />,
           to: "/site/purchaserequestsite",
         },
         {
           title: "Site Assets",
-          icon: <RiDiscountPercentLine size={23} />,  
+          icon: <RiDiscountPercentLine size={23} />,
           to: "/site/siteassets",
         },
         {
           title: "Weekly Billing",
-          icon: <RiDiscountPercentLine size={23} />,  
+          icon: <RiDiscountPercentLine size={23} />,
           to: "/site/weeklybillingsite",
-        }
+        },
       ],
     },
     {
@@ -315,9 +314,19 @@ const LayOut = () => {
           to: "/finance/purchasetotalbill",
         },
         {
+          title: "Contractor Bill",
+          icon: <ClipboardList size={23} />,
+          to: "/finance/contractorbill",
+        },
+        {
           title: "Debit, Credit Note",
           icon: <FileWarning size={23} />,
           to: "/finance/debitcreditnote",
+        },
+        {
+          title: "Internal Bank Transfer",
+          icon: <TbReportMoney size={23} />,
+          to: "/finance/internalbanktransfer",
         },
         {
           title: "Bank Transcation",
@@ -356,76 +365,87 @@ const LayOut = () => {
         },
       ],
     },
- {
+    {
       title: "Reports",
       icon: <TbReportAnalytics size={23} />,
       to: "/reports/projectdashboard",
       nested: [
         {
           title: "Project Dashboard",
-          icon: <HiOutlineClipboardDocumentList  size={23} />,
+          icon: <HiOutlineClipboardDocumentList size={23} />,
           to: "/reports/projectdashboard",
         },
-         {
+        {
           title: "Work Analysis",
           icon: <LuWorkflow size={23} />,
           to: "/reports/workanalysis",
-        }, {
+        },
+        {
           title: "Client Billing",
           icon: <RiBillLine RoundSearch size={23} />,
           to: "/reports/clientbilling",
-        }, 
+        },
         {
           title: "Financial Report",
-          icon: <TbFileDelta   size={23} />,
+          icon: <TbFileDelta size={23} />,
           to: "/reports/financialreport",
-        }, {
+        },
+        {
           title: "P&L",
-          icon: <TbFileInvoice  size={23} />,
+          icon: <TbFileInvoice size={23} />,
           to: "/reports/p&l",
-        }, {
+        },
+        {
           title: "Cash Flow",
           icon: <HiOutlineCash size={23} />,
           to: "/reports/cashflow",
         },
-         {
+        {
           title: "Expenses Report",
-          icon: <TbFileDollar  size={23} />,
+          icon: <TbFileDollar size={23} />,
           to: "/reports/expensesreport",
-        }, {
+        },
+        {
           title: "Vendor Report",
-          icon: <TbFileInvoice  size={23} />,
+          icon: <TbFileInvoice size={23} />,
           to: "/reports/vendorreport",
-        }, {
+        },
+        {
           title: "Reconciliation",
-          icon: <TbFileOrientation  size={23} />,
+          icon: <TbFileOrientation size={23} />,
           to: "/reports/reconciliation",
-        }, {
+        },
+        {
           title: "Actual vs Biller",
-          icon: <TbReceipt2  size={23} />,
+          icon: <TbReceipt2 size={23} />,
           to: "/reports/actualvsbilled",
-        }, {
+        },
+        {
           title: "Cost to Complete",
-          icon: <RiDiscountPercentLine  size={23} />,
+          icon: <RiDiscountPercentLine size={23} />,
           to: "/reports/costtocomplete",
-        }, {
+        },
+        {
           title: "Schedule",
-          icon: <LuCalendar1  size={23} />,
+          icon: <LuCalendar1 size={23} />,
           to: "/reports/schedule",
         },
-         {
+        {
           title: "Planned Vs Actual",
           icon: <Quote size={23} />,
           to: "/reports/plannedvsactual",
-        }, {
+        },
+        {
           title: "Labour Productivity",
           icon: <GiHoneycomb size={23} />,
           to: "/reports/labourproductivity",
-        }, {
+        },
+        {
           title: "Machine Productivity",
           icon: <LuGlassWater size={23} />,
           to: "/reports/machineproductivity",
-        }, {
+        },
+        {
           title: "Collection Projection",
           icon: <RiShareBoxLine size={23} />,
           to: "/reports/collectionprojection",
