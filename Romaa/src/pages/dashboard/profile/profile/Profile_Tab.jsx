@@ -109,7 +109,7 @@ const Profile_Tab = () => {
                 project_name={false}
               />
             </div>
-            <div className="bg-white rounded-xl"></div>
+            <div className="bg-white rounded-xl p-7"><p className="font-semibold">Achivements</p></div>
           </div>
           <div className="row-span-6 bg-white rounded-xl grid grid-cols-2 ">
             <div className="col-span-1 my-6 ">

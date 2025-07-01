@@ -182,7 +182,7 @@ const ViewCalendar = () => {
             filteredProjects.map((appt, idx) => (
               <div
                 key={idx}
-                className="flex  justify-center items-center  rounded-md space-x-3"
+                className="flex  justify-center items-center bg-white  rounded-md space-x-3"
               >
                 <div
                   className={`py-9 px-1 rounded-l-md ${

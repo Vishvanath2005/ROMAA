@@ -27,7 +27,7 @@ import ClientBilling from "../pages/finanace/client_billing/ClientBilling";
 import Debit_CreditNote from "../pages/finanace/debit_creditnote/Debit_CreditNote";
 import BankTransactions from "../pages/finanace/bank_transactions/BankTransactions";
 import JournalEntry from "../pages/finanace/journal_entry/JournalEntry";
-import GST_PL from "../pages/finanace/gst_pl/GST_PL";
+// import GST_PL from "../pages/finanace/gst_pl/GST_PL";
 import Banks from "../pages/finanace/banks/Banks";
 import TDS from "../pages/finanace/tds/TDS";
 import CashEntry from "../pages/finanace/cash_entry/CashEntry";
@@ -110,6 +110,17 @@ import Tickets from "../pages/dashboard/tickets/Tickets";
 import Profile from "../pages/dashboard/profile/Profile";
 import ContractorBill from "../pages/finanace/contractor_bill/ContractorBill";
 import InternalBankTransfer from "../pages/finanace/internal_bank_transfer/InternalBankTransfer";
+import LedgerEntry from "../pages/finanace/ledger_entry/LedgerEntry";
+import ViewLedgerEntry from "../pages/finanace/ledger_entry/ViewLedgerEntry";
+import ResentPassword from "../pages/auth/ResentPassword";
+import ViewP_L from "../pages/reports/p&l/ViewP_L";
+import Overall_expenses from "../pages/finanace/overall_expenses/Overall_expenses";
+import NMR from "../pages/Hr/nmr/NMR";
+import ViewNMR from "../pages/Hr/nmr/ViewNMR";
+import EditNMR from "../pages/Hr/nmr/EditNMR";
+import NMRattendance from "../pages/Hr/nmr_attendance/NMRattendance";
+import ViewTableReport from "../pages/reports/planned_vs_actual/table/ViewTableReport";
+import ViewCollectionProjection from "../pages/reports/collection_projection/ViewCollectionProjection";
 
 const AppRoutes = () => {
   return (
@@ -119,6 +130,7 @@ const AppRoutes = () => {
         <Routes>
           <Route path="" element={<Login />} />
           <Route path="/forgotpassword" element={<ForgotPassword />} />
+          <Route path="/resetpassword" element={<ResentPassword />} />
           <Route path="/" element={<LayOut />}>
             <Route path="/dashboard">
               <Route index element={<Dashboard />} />
@@ -274,25 +286,40 @@ const AppRoutes = () => {
               <Route path="leave" element={<Leave />} />
               <Route path="payroll" element={<PayRoll />} />
               <Route path="contractnmr" element={<ContractNmr />} />
+              <Route path="NMRattendance" element={<NMRattendance />} />
+              <Route path="nmr">
+                <Route index element={<NMR />} />
+                <Route path="viewnmr" element={<ViewNMR />} />
+                <Route path="editnmr" element={<EditNMR />} />
+              </Route>
             </Route>
+
             <Route path="/finance">
               <Route path="clientbilling" element={<ClientBilling />} />
               <Route path="purchasetotalbill" element={<PurchaseTotalBill />} />
               <Route path="contractorbill" element={<ContractorBill />} />
-              <Route path="internalbanktransfer" element={<InternalBankTransfer />} />
+              <Route
+                path="internalbanktransfer"
+                element={<InternalBankTransfer />}
+              />
               <Route path="debitcreditnote" element={<Debit_CreditNote />} />
               <Route path="banktransaction" element={<BankTransactions />} />
               <Route path="journalentry" element={<JournalEntry />} />
-              <Route path="gst" element={<GST_PL />} />
+              {/* <Route path="gst" element={<GST_PL />} /> */}
               <Route path="banks" element={<Banks />} />
               <Route path="tds" element={<TDS />} />
               <Route path="cashentry" element={<CashEntry />} />
+              <Route path="ledgerentry">
+                <Route index element={<LedgerEntry />} />
+                <Route path="viewledgerentry" element={<ViewLedgerEntry />} />
+              </Route>{" "}
               <Route
                 path="supplieroutstanding"
                 element={<SupplierOutstanding />}
               />
+              <Route path="overallexpenses" element={<Overall_expenses />} />
             </Route>
-             <Route path="/reports">
+            <Route path="/reports">
               <Route path="projectdashboard" element={<ProjectDashboard />} />
               <Route path="workanalysis">
                 <Route index element={<WorkAnalysis />} />
@@ -305,22 +332,33 @@ const AppRoutes = () => {
                   element={<ViewClientBilling />}
                 />
               </Route>
-               <Route path="financialreport">
+              <Route path="financialreport">
                 <Route index element={<FinancialReport />} />
                 <Route
                   path="viewfinancialreport"
                   element={<ViewFinancialReport />}
                 />
               </Route>
-              <Route path="p&l" element={<P_L />} />
+              <Route path="p&l">
+                <Route index element={<P_L />} />
+                <Route path="viewp&l" element={<ViewP_L />} />
+              </Route>
               <Route path="cashflow" element={<CashFlow />} />
               <Route path="expensesreport" element={<ExpensesReport />} />
               <Route path="vendorreport" element={<VendorReport />} />
               <Route path="reconciliation" element={<Reconciliation />} />
               <Route path="actualvsbilled" element={<ActualvsBilled />} />
+            
               <Route path="costtocomplete" element={<CosttoComplete />} />
               <Route path="schedule" element={<Schedule />} />
-              <Route path="plannedvsactual" element={<PlannedvsAcutal />} />
+             
+                <Route path="plannedvsactual">
+                <Route index element={<PlannedvsAcutal />} />
+                <Route
+                  path="viewtablereport"
+                  element={<ViewTableReport />}
+                />
+              </Route>
               <Route
                 path="labourproductivity"
                 element={<LabourProductivity />}
@@ -329,10 +367,10 @@ const AppRoutes = () => {
                 path="machineproductivity"
                 element={<MachineProductivity />}
               />
-              <Route
-                path="collectionprojection"
-                element={<CollectionProjection />}
-              />
+               <Route path="collectionprojection">
+                <Route index element={<CollectionProjection />} />
+                <Route path="viewcollectionprojection" element={<ViewCollectionProjection />} />
+              </Route>
             </Route>
             <Route path="/settings">
               <Route path="user">

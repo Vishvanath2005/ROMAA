@@ -2234,43 +2234,64 @@ export const SupplierOutstandingData = [
     date: "13.05.2025",
     supplier: "Name",
     amount: "₹586587",
-    bill: "#656758",
-    innerAmount: "₹586587",
-    particles: "Particle",
+    nestedData: [
+      {
+        bill: "#656758",
+        amount: "₹586587",
+        particles: "Particle"
+      }
+    ]
   },
   {
     date: "13.05.2025",
     supplier: "Acme Supplies",
     amount: "₹325000",
-    bill: "#781234",
-    innerAmount: "₹325000",
-    particles: "Granules",
+    nestedData: [
+      {
+        bill: "#781234",
+        amount: "₹325000",
+        particles: "Granules"
+      }
+    ]
   },
   {
     date: "13.05.2025",
     supplier: "TechCorp Ltd.",
     amount: "₹452300",
-    bill: "#990321",
-    innerAmount: "₹452300",
-    particles: "Dust",
+    nestedData: [
+      {
+        bill: "#990321",
+        amount: "₹452300",
+        particles: "Dust"
+      }
+    ]
   },
   {
     date: "13.05.2025",
     supplier: "NanoChem Inc.",
     amount: "₹123456",
-    bill: "#110987",
-    innerAmount: "₹123456",
-    particles: "Nano Powder",
+    nestedData: [
+      {
+        bill: "#110987",
+        amount: "₹123456",
+        particles: "Nano Powder"
+      }
+    ]
   },
   {
     date: "13.05.2025",
     supplier: "EcoMaterials",
     amount: "₹789000",
-    bill: "#563839",
-    innerAmount: "₹789000",
-    particles: "Resin",
-  },
+    nestedData: [
+      {
+        bill: "#563839",
+        amount: "₹789000",
+        particles: "Resin"
+      }
+    ]
+  }
 ];
+
 
 export const Summarydata = [
   {
@@ -5793,4 +5814,636 @@ export const internalBankTransferData = [
     transferredBy: "Name",
   },
 ];
+
+export const ledgerData = [
+  {
+    vendor: "Name",
+    credit: 458765,
+    debit: 598508,
+    balance: "₹1,03,733.00",
+  },
+  {
+    vendor: "Name",
+    credit: 458765,
+    debit: 598508,
+    balance: "₹1,03,733.00",
+  },
+  {
+    vendor: "Name",
+    credit: 458765,
+    debit: 598508,
+    balance: "₹1,03,733.00",
+  },
+  {
+    vendor: "Name",
+    credit: 458765,
+    debit: 598508,
+    balance: "₹1,03,733.00",
+  },
+  {
+    vendor: "Name",
+    credit: 458765,
+    debit: 598508,
+    balance: "₹1,03,733.00",
+  },
+  {
+    vendor: "Name",
+    credit: 458765,
+    debit: 598508,
+    balance: "₹1,03,733.00",
+  },
+  {
+    vendor: "Name",
+    credit: 458765,
+    debit: 598508,
+    balance: "₹1,03,733.00",
+  },
+  {
+    vendor: "Name",
+    credit: 458765,
+    debit: 598508,
+    balance: "₹1,03,733.00",
+  },
+  {
+    vendor: "Name",
+    credit: 458765,
+    debit: 598508,
+    balance: "₹1,03,733.00",
+  },
+];
+
+export const viewledgerData = [
+  {
+    sNo: 1,
+    vehicleDate: "27.05.2025",
+    vehicleNo: "JHK687",
+    chequeNo: "25876486",
+    particulars: "Labor Charges",
+    debitAmount: "₹674898",
+    creditAmount: "₹1,03,733.00",
+    balance: "₹1,03,733.00"
+  },
+  {
+    sNo: 2,
+    vehicleDate: "27.05.2025",
+    vehicleNo: "JHK687",
+    chequeNo: "25876486",
+    particulars: "Labor Charges",
+    debitAmount: "₹674898",
+    creditAmount: "₹1,03,733.00",
+    balance: "₹1,03,733.00"
+  },
+  {
+    sNo: 3,
+    vehicleDate: "27.05.2025",
+    vehicleNo: "JHK687",
+    chequeNo: "25876486",
+    particulars: "Labor Charges",
+    debitAmount: "₹674898",
+    creditAmount: "₹1,03,733.00",
+    balance: "₹1,03,733.00"
+  },
+  {
+    sNo: 4,
+    vehicleDate: "27.05.2025",
+    vehicleNo: "JHK687",
+    chequeNo: "25876486",
+    particulars: "Labor Charges",
+    debitAmount: "₹674898",
+    creditAmount: "₹1,03,733.00",
+    balance: "₹1,03,733.00"
+  },
+  {
+    sNo: 5,
+    vehicleDate: "27.05.2025",
+    vehicleNo: "JHK687",
+    chequeNo: "25876486",
+    particulars: "Labor Charges",
+    debitAmount: "₹674898",
+    creditAmount: "₹1,03,733.00",
+    balance: "₹1,03,733.00"
+  },
+  {
+    sNo: 6,
+    vehicleDate: "27.05.2025",
+    vehicleNo: "JHK687",
+    chequeNo: "25876486",
+    particulars: "Labor Charges",
+    debitAmount: "₹674898",
+    creditAmount: "₹1,03,733.00",
+    balance: "₹1,03,733.00"
+  },
+  {
+    sNo: 7,
+    vehicleDate: "27.05.2025",
+    vehicleNo: "JHK687",
+    chequeNo: "25876486",
+    particulars: "Labor Charges",
+    debitAmount: "₹674898",
+    creditAmount: "₹1,03,733.00",
+    balance: "₹1,03,733.00"
+  },
+  {
+    sNo: 8,
+    vehicleDate: "27.05.2025",
+    vehicleNo: "JHK687",
+    chequeNo: "25876486",
+    particulars: "Labor Charges",
+    debitAmount: "₹674898",
+    creditAmount: "₹1,03,733.00",
+    balance: "₹1,03,733.00"
+  },
+  {
+    sNo: 9,
+    vehicleDate: "27.05.2025",
+    vehicleNo: "JHK687",
+    chequeNo: "25876486",
+    particulars: "Labor Charges",
+    debitAmount: "₹674898",
+    creditAmount: "₹1,03,733.00",
+    balance: "₹1,03,733.00"
+  },
+  {
+    sNo: 10,
+    vehicleDate: "27.05.2025",
+    vehicleNo: "JHK687",
+    chequeNo: "25876486",
+    particulars: "Labor Charges",
+    debitAmount: "₹674898",
+    creditAmount: "₹1,03,733.00",
+    balance: "₹1,03,733.00"
+  }
+];
+
+export const OverallProjectData = [
+  {
+    id: "PRJ001",
+    projectName: "Name",
+    expenses: "₹547687",
+    tax: "34%",
+    amount: "₹635767",
+    date: "01.05.2025",
+    status: "Paid"
+  },
+  {
+    id: "PRJ002",
+    projectName: "Name",
+    expenses: "₹547687",
+    tax: "34%",
+    amount: "₹635767",
+    date: "01.05.2025",
+    status: "Paid"
+  },
+  {
+    id: "PRJ003",
+    projectName: "Name",
+    expenses: "₹547687",
+    tax: "34%",
+    amount: "₹635767",
+    date: "01.05.2025",
+    status: "Paid"
+  },
+  {
+    id: "PRJ004",
+    projectName: "Name",
+    expenses: "₹547687",
+    tax: "34%",
+    amount: "₹635767",
+    date: "01.05.2025",
+    status: "Paid"
+  },
+  {
+    id: "PRJ005",
+    projectName: "Name",
+    expenses: "₹547687",
+    tax: "34%",
+    amount: "₹635767",
+    date: "01.05.2025",
+    status: "Paid"
+  },
+  {
+    id: "PRJ006",
+    projectName: "Name",
+    expenses: "₹547687",
+    tax: "34%",
+    amount: "₹635767",
+    date: "01.05.2025",
+    status: "Paid"
+  },
+  {
+    id: "PRJ007",
+    projectName: "Name",
+    expenses: "₹547687",
+    tax: "34%",
+    amount: "₹635767",
+    date: "01.05.2025",
+    status: "Paid"
+  },
+  {
+    id: "PRJ008",
+    projectName: "Name",
+    expenses: "₹547687",
+    tax: "34%",
+    amount: "₹635767",
+    date: "01.05.2025",
+    status: "Paid"
+  },
+  {
+    id: "PRJ009",
+    projectName: "Name",
+    expenses: "₹547687",
+    tax: "34%",
+    amount: "₹635767",
+    date: "01.05.2025",
+    status: "Paid"
+  },
+  {
+    id: "PRJ010",
+    projectName: "Name",
+    expenses: "₹547687",
+    tax: "34%",
+    amount: "₹635767",
+    date: "01.05.2025",
+    status: "Paid"
+  }
+];
+
+export const vendoroverallData = [
+  {
+    id: "PRJ001",
+    projectName: "Name",
+    vendorName: "Name",
+    expenses: "₹547687",
+    tax: "34%",
+    amount: "₹635767",
+    date: "01.05.2025",
+    status: "Paid"
+  },
+  {
+    id: "PRJ002",
+    projectName: "Name",
+    vendorName: "Name",
+    expenses: "₹547687",
+    tax: "34%",
+    amount: "₹635767",
+    date: "01.05.2025",
+    status: "Paid"
+  },
+  {
+    id: "PRJ003",
+    projectName: "Name",
+    vendorName: "Name",
+    expenses: "₹547687",
+    tax: "34%",
+    amount: "₹635767",
+    date: "01.05.2025",
+    status: "Paid"
+  },
+  {
+    id: "PRJ004",
+    projectName: "Name",
+    vendorName: "Name",
+    expenses: "₹547687",
+    tax: "34%",
+    amount: "₹635767",
+    date: "01.05.2025",
+    status: "Paid"
+  },
+  {
+    id: "PRJ005",
+    projectName: "Name",
+    vendorName: "Name",
+    expenses: "₹547687",
+    tax: "34%",
+    amount: "₹635767",
+    date: "01.05.2025",
+    status: "Paid"
+  },
+  {
+    id: "PRJ006",
+    projectName: "Name",
+    vendorName: "Name",
+    expenses: "₹547687",
+    tax: "34%",
+    amount: "₹635767",
+    date: "01.05.2025",
+    status: "Paid"
+  },
+  {
+    id: "PRJ007",
+    projectName: "Name",
+    vendorName: "Name",
+    expenses: "₹547687",
+    tax: "34%",
+    amount: "₹635767",
+    date: "01.05.2025",
+    status: "Paid"
+  },
+  {
+    id: "PRJ008",
+    projectName: "Name",
+    vendorName: "Name",
+    expenses: "₹547687",
+    tax: "34%",
+    amount: "₹635767",
+    date: "01.05.2025",
+    status: "Paid"
+  },
+  {
+    id: "PRJ009",
+    projectName: "Name",
+    vendorName: "Name",
+    expenses: "₹547687",
+    tax: "34%",
+    amount: "₹635767",
+    date: "01.05.2025",
+    status: "Paid"
+  },
+  {
+    id: "PRJ010",
+    projectName: "Name",
+    vendorName: "Name",
+    expenses: "₹547687",
+    tax: "34%",
+    amount: "₹635767",
+    date: "01.05.2025",
+    status: "Paid"
+  }
+];
+
+export const NMRData = [
+  {
+    sno: 1,
+    nmrid: "#5689336",
+    name: "Priya",
+    role: "Engineer",
+    department: "Civil",
+    siteAssigned: "Site Name",
+    status: "Active",
+  },
+  {
+    sno: 2,
+    nmrid: "#5689336",
+    name: "Priya",
+    role: "Engineer",
+    department: "Civil",
+    siteAssigned: "Site Name",
+    status: "Active",
+  },
+  {
+    sno: 3,
+    nmrid: "#5689336",
+    name: "Priya",
+    role: "Engineer",
+    department: "Civil",
+    siteAssigned: "Site Name",
+    status: "Active",
+  },
+  {
+    sno: 4,
+    nmrid: "#5689336",
+    name: "Priya",
+    role: "Engineer",
+    department: "Civil",
+    siteAssigned: "Site Name",
+    status: "Active",
+  },
+  {
+    sno: 5,
+    nmrid: "#5689336",
+    name: "Priya",
+    role: "Engineer",
+    department: "Civil",
+    siteAssigned: "Site Name",
+    status: "Active",
+  },
+  {
+    sno: 6,
+    nmrid: "#5689336",
+    name: "Priya",
+    role: "Engineer",
+    department: "Civil",
+    siteAssigned: "Site Name",
+    status: "Active",
+  },
+  {
+    sno: 7,
+    nmrid: "#5689336",
+    name: "Priya",
+    role: "Engineer",
+    department: "Civil",
+    siteAssigned: "Site Name",
+    status: "Active",
+  },
+  {
+    sno: 8,
+    nmrid: "#5689336",
+    name: "Priya",
+    role: "Engineer",
+    department: "Civil",
+    siteAssigned: "Site Name",
+    status: "Active",
+  },
+  {
+    sno: 9,
+    nmrid: "#5689336",
+    name: "Priya",
+    role: "Engineer",
+    department: "Civil",
+    siteAssigned: "Site Name",
+    status: "Active",
+  },
+  {
+    sno: 10,
+    nmrid: "#5689336",
+    name: "Priya",
+    role: "Engineer",
+    department: "Civil",
+    siteAssigned: "Site Name",
+    status: "Active",
+  },
+  {
+    sno: 11,
+    nmrid: "#5689336",
+    name: "Priya",
+    role: "Engineer",
+    department: "Civil",
+    siteAssigned: "Site Name",
+    status: "Active",
+  },
+  {
+    sno: 12,
+    nmrid: "#5689336",
+    name: "Priya",
+    role: "Engineer",
+    department: "Civil",
+    siteAssigned: "Site Name",
+    status: "Active",
+  },
+];
+
+export const planedtableData = [
+  {
+    sno: 1,
+    description: "Dismantling clearing away and",
+    unit: "100 Cubic's",
+    quantity: 3627,
+    labor: "56%",
+    actualRate: 53.89,
+    nestedData: [
+      {
+        carpenter: "8.00",
+        helper: "6",
+        barbender: "6578",
+        helper2: "7",
+        amountpaid: "₹65789"
+      },
+      {
+        carpenter: "8.00",
+        helper: "6",
+        barbender: "6578",
+        helper2: "7",
+        amountpaid: "₹65789"
+      }
+    ]
+  },
+  {
+    sno: 2,
+    description: "Dismantling clearing away and",
+    unit: "100 Cubic's",
+    quantity: 3627,
+    labor: "56%",
+    actualRate: 53.89,
+    nestedData: [
+      {
+        carpenter: "7.50",
+        helper: "5",
+        barbender: "6000",
+        helper2: "6",
+        amountpaid: "₹60000"
+      },
+      {
+        carpenter: "7.50",
+        helper: "5",
+        barbender: "6000",
+        helper2: "6",
+        amountpaid: "₹60000"
+      }
+    ]
+  },
+  {
+    sno: 3,
+    description: "Dismantling clearing away and",
+    unit: "100 Cubic's",
+    quantity: 3627,
+    labor: "56%",
+    actualRate: 53.89,
+    nestedData: [
+      {
+        carpenter: "6.00",
+        helper: "4",
+        barbender: "5800",
+        helper2: "5",
+        amountpaid: "₹50000"
+      },
+      {
+        carpenter: "6.00",
+        helper: "4",
+        barbender: "5800",
+        helper2: "5",
+        amountpaid: "₹50000"
+      }
+    ]
+  },
+  {
+    sno: 4,
+    description: "Dismantling clearing away and",
+    unit: "100 Cubic's",
+    quantity: 3627,
+    labor: "56%",
+    actualRate: 53.89,
+    nestedData: [
+      {
+        carpenter: "8.00",
+        helper: "6",
+        barbender: "6578",
+        helper2: "7",
+        amountpaid: "₹65789"
+      },
+      {
+        carpenter: "8.00",
+        helper: "6",
+        barbender: "6578",
+        helper2: "7",
+        amountpaid: "₹65789"
+      }
+    ]
+  }
+];
+
+export const collectionprojectionData =[
+  {
+    "projectName": "Name",
+    "projectionAmount": "₹547687",
+    "firstProjectionDate": "01.02.2025",
+    "projectionDate": "06.06.2025",
+    "receivedAmount": "₹4567657"
+  },
+  {
+    "projectName": "Name",
+    "projectionAmount": "₹547687",
+    "firstProjectionDate": "01.02.2025",
+    "projectionDate": "06.06.2025",
+    "receivedAmount": "₹4567657"
+  },
+  {
+    "projectName": "Name",
+    "projectionAmount": "₹547687",
+    "firstProjectionDate": "01.02.2025",
+    "projectionDate": "06.06.2025",
+    "receivedAmount": "₹4567657"
+  },
+  {
+    "projectName": "Name",
+    "projectionAmount": "₹547687",
+    "firstProjectionDate": "01.02.2025",
+    "projectionDate": "06.06.2025",
+    "receivedAmount": "₹4567657"
+  },
+  {
+    "projectName": "Name",
+    "projectionAmount": "₹547687",
+    "firstProjectionDate": "01.02.2025",
+    "projectionDate": "06.06.2025",
+    "receivedAmount": "₹4567657"
+  },
+  {
+    "projectName": "Name",
+    "projectionAmount": "₹547687",
+    "firstProjectionDate": "01.02.2025",
+    "projectionDate": "06.06.2025",
+    "receivedAmount": "₹4567657"
+  },
+  {
+    "projectName": "Name",
+    "projectionAmount": "₹547687",
+    "firstProjectionDate": "01.02.2025",
+    "projectionDate": "06.06.2025",
+    "receivedAmount": "₹4567657"
+  },
+  {
+    "projectName": "Name",
+    "projectionAmount": "₹547687",
+    "firstProjectionDate": "01.02.2025",
+    "projectionDate": "06.06.2025",
+    "receivedAmount": "₹4567657"
+  },
+  {
+    "projectName": "Name",
+    "projectionAmount": "₹547687",
+    "firstProjectionDate": "01.02.2025",
+    "projectionDate": "06.06.2025",
+    "receivedAmount": "₹4567657"
+  }
+]
 

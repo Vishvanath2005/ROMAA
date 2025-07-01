@@ -61,7 +61,8 @@ const Profile = () => {
               </>
             )}
             {activeTab === "leave" && <><Leave /></>}
-            {activeTab === "document" && <></>}
+            {activeTab === "document" && <>
+            <p>Screens under developement</p></>}
           </div>
         
      

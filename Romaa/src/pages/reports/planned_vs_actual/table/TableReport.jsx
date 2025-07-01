@@ -1,29 +1,29 @@
+import React from 'react'
+import AccordionTable from '../../../../components/AccordionTable'
+import {planedtableData} from "../../../../components/Data"
+const TableReport = () => {
 
-import { tableData } from "../../../../components/Data";
-import Table from "../../../../components/Table";
-
-const tablecolumn = [
-  { key: "projectName", label: "Project Name" },
-  { key: "projectPlanned", label: "Project Planned" },
-  { key: "pendingWork", label: "Pending work" },
-  { key: "variance", label: "Variance" },
+ const columns = [
+ 
+  { label: "Description", key: "description" },
+  { label: "Unit", key: "unit" },
+  { label: "Quantity", key: "quantity" },
+  { label: "Labor", key: "labor" },
+  { label: "Actual Rate/Sqm", key: "actualRate" }
 ];
 
-
-const TableReport = () => {
+const nestedHeaders= ["Carpenter", "Helper", "Barbender", "Helper 2", "Amount paid"]
   return (
-    <div className="font-roboto-flex flex flex-col h-full">
-      <Table
-        ExportModal={false}
-        endpoint={tableData}
-        columns={tablecolumn}  
-        onExport={() => console.log("Exporting...")}
-        addButtonLabel={null}
-        addButtonIcon={null}
-        exportModal={false}
-      />
-    </div>
-  );
-};
+    <div><AccordionTable
+    exportModal={false}
+  data={planedtableData}
+  columns={columns}
+  ViewModal={true}
+  routepoint={"/reports/plannedvsactual/viewtablereport"}
+  nestedHeaders={nestedHeaders}
+
+/></div>
+  )
+}
 
 export default TableReport;

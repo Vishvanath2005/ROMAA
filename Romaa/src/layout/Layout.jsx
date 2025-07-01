@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Headers from "./Headers";
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import { RiCalendarScheduleLine, RiDashboardLine } from "react-icons/ri";
-import { TbFileDelta } from "react-icons/tb";
+import { TbFileDelta, TbListSearch } from "react-icons/tb";
 import { LuUserRoundSearch } from "react-icons/lu";
 import { BsCart3 } from "react-icons/bs";
 import { HiOutlineClipboardList } from "react-icons/hi";
@@ -23,6 +23,7 @@ import { LuFileUser } from "react-icons/lu";
 import { TbDoorExit } from "react-icons/tb";
 import { LuScrollText } from "react-icons/lu";
 import { TbContract } from "react-icons/tb";
+import { FaBars } from 'react-icons/fa';
 import {
   FileText,
   ClipboardList,
@@ -58,6 +59,7 @@ import { TbShieldLock } from "react-icons/tb";
 import { TbShieldCheckered } from "react-icons/tb";
 import { RiShareBoxLine } from "react-icons/ri";
 import { HiOutlineCash } from "react-icons/hi";
+import { TfiLayoutListThumb } from "react-icons/tfi";
 import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
 const LayOut = () => {
   const location = useLocation();
@@ -295,6 +297,15 @@ const LayOut = () => {
           title: "Contract & NMR",
           icon: <TbContract size={23} />,
           to: "/hr/contractnmr",
+        },{
+          title: "NMR",
+          icon: <TbListSearch  size={23} />,
+          to: "/hr/nmr",
+        },
+        {
+          title: "NMR Attendance",
+          icon: <TfiLayoutListThumb  size={23} />,
+          to: "/hr/NMRattendance",
         },
       ],
     },
@@ -339,11 +350,6 @@ const LayOut = () => {
           to: "/finance/journalentry",
         },
         {
-          title: "GST P&L",
-          icon: <LuFileText size={23} />,
-          to: "/finance/gst",
-        },
-        {
           title: "Banks",
           icon: <RiBankLine size={23} />,
           to: "/finance/banks",
@@ -358,10 +364,19 @@ const LayOut = () => {
           icon: <MdLocalAtm size={23} />,
           to: "/finance/cashentry",
         },
+          {
+          title: "Ledger Entry",
+          icon: <MdLocalAtm size={23} />,
+          to: "/finance/ledgerentry",
+        },
         {
           title: "Supplier Outstanding",
           icon: <Banknote size={23} />,
           to: "/finance/supplieroutstanding",
+        },  {
+          title: "Overall Expenses",
+          icon: <FaBars size={23} />,
+          to: "/finance/overallexpenses",
         },
       ],
     },

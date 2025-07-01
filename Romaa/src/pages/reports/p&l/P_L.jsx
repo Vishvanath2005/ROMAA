@@ -23,6 +23,7 @@ const P_L = () => {
         endpoint={p_lData}
         columns={p_lColumns}
         ViewModal={true}
+        routepoint={`/reports/p&l/viewp&l`}
         FilterModal={Filters}
         onExport={() => console.log("Exporting...")}
         addButtonLabel={null}
