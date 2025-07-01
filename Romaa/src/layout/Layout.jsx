@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import Headers from "./Headers";
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import { RiCalendarScheduleLine, RiDashboardLine } from "react-icons/ri";
-import { TbFileDelta, TbListSearch } from "react-icons/tb";
-import { LuUserRoundSearch } from "react-icons/lu";
+import { TbAssembly, TbFileDelta, TbListSearch } from "react-icons/tb";
+import { LuFileBox, LuUserRoundSearch } from "react-icons/lu";
 import { BsCart3 } from "react-icons/bs";
 import { HiOutlineClipboardList } from "react-icons/hi";
 import { LiaClipboardListSolid } from "react-icons/lia";
@@ -46,7 +46,7 @@ import { TbFileOrientation } from "react-icons/tb";
 import { RiDiscountPercentLine } from "react-icons/ri";
 import { LuCalendar1 } from "react-icons/lu";
 import { TbBrandSurfshark } from "react-icons/tb";
-import { PiBoundingBoxBold } from "react-icons/pi";
+import { PiBoundingBoxBold, PiHash } from "react-icons/pi";
 import { RiNodeTree } from "react-icons/ri";
 import { TbCalendarStats } from "react-icons/tb";
 import { AiOutlineFileDone } from "react-icons/ai";
@@ -70,7 +70,7 @@ const LayOut = () => {
       icon: <RiDashboardLine size={23} />,
       to: "/dashboard",
     },
-    {
+      {
       title: "Tender",
       icon: <TbFileDelta size={23} />,
       to: "/tender/customers",
@@ -90,6 +90,11 @@ const LayOut = () => {
           icon: <LiaClipboardListSolid size={23} />,
           to: "/tender/workorders",
         },
+             {
+          title: "DLP",
+          icon: <TbDatabaseDollar size={23} />,
+          to: "/tender/dlp",
+        },
         {
           title: "EMD",
           icon: <TbLockDollar size={23} />,
@@ -105,18 +110,14 @@ const LayOut = () => {
           icon: <TbShieldCheckered size={23} />,
           to: "/tender/projectpenalty",
         },
-        {
-          title: "DLP",
-          icon: <TbDatabaseDollar size={23} />,
-          to: "/tender/dlp",
-        },
+   
       ],
     },
-    {
+   {
       title: "Projects",
       icon: <HiOutlineClipboardList size={23} />,
       to: "/projects",
-      nested: [
+          nested: [
         {
           title: "Zero Cost",
           icon: <RiDiscountPercentLine size={23} />,
@@ -145,18 +146,34 @@ const LayOut = () => {
         {
           title: "WOR / WO issuance",
           icon: <AiOutlineFileDone size={23} />,
-          // to: "/projects/woissuance",
+          to: "/projects/woissuance",
         },
         {
           title: "Client Billing",
           icon: <TbReceipt2 size={23} />,
-          // to: "/projects/clientbilling",
+          to: "/projects/clientbillingprojects",
         },
         {
           title: "Work Progress",
           icon: <GrInProgress size={23} />,
+          to: "/projects/workprogressprojects",
+        },
+        {
+          title: "Basic Material Quantity",
+          icon: <PiHash size={23} />,
+          to: "/projects/projectsmaterialquantity",
+        },
+        {
+          title: "Stocks",
+          icon: <LuFileBox size={23} />,
           // to: "/projects/workprogress",
         },
+        {
+          title: "Assets",
+          icon: <TbAssembly size={23} />,
+          // to: "/projects/workprogress",
+        },
+     
       ],
     },
     {
@@ -211,61 +228,61 @@ const LayOut = () => {
           icon: <RiDiscountPercentLine size={23} />,
           to: "/site/boqsite",
         },
-        {
+         {
           title: "Detailed Estimate ",
           icon: <AiOutlineFileAdd size={23} />,
           to: "/site/detailestimatesite",
         },
-        {
+         {
           title: "Site Drawing",
           icon: <RiDiscountPercentLine size={23} />,
           to: "/site/sitedrawing",
         },
-        {
+         {
           title: "Schedule",
           icon: <RiCalendarScheduleLine size={23} />,
           //to: "/site/sitedrawing",
         },
-        {
+         {
           title: "Work Done",
           icon: <RiDiscountPercentLine size={23} />,
           to: "/site/workDoneSite",
         },
-        {
+         {
           title: "Daily Labour Report",
           icon: <RiDiscountPercentLine size={23} />,
           to: "/site/dialylabourreport",
         },
-        {
+         {
           title: "Material Received",
           icon: <RiDiscountPercentLine size={23} />,
           to: "/site/materialrecievedsite",
         },
-        {
+         {
           title: "Material Issued",
           icon: <RiDiscountPercentLine size={23} />,
           to: "/site/materialissuedsite",
         },
-        {
+         {
           title: "Stock Register",
           icon: <RiDiscountPercentLine size={23} />,
           to: "/site/stockregistersite",
         },
-        {
+         {
           title: "Purchase Request",
           icon: <RiDiscountPercentLine size={23} />,
           to: "/site/purchaserequestsite",
         },
         {
           title: "Site Assets",
-          icon: <RiDiscountPercentLine size={23} />,
+          icon: <RiDiscountPercentLine size={23} />,  
           to: "/site/siteassets",
         },
         {
           title: "Weekly Billing",
-          icon: <RiDiscountPercentLine size={23} />,
+          icon: <RiDiscountPercentLine size={23} />,  
           to: "/site/weeklybillingsite",
-        },
+        }
       ],
     },
     {

@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { TbPencil} from "react-icons/tb";
 import { IoChevronBackSharp } from "react-icons/io5";
 import { useLocation, useNavigate } from "react-router-dom";
-
-
 import { AiOutlineSave } from "react-icons/ai";
 import Title from "../../../components/Title";
 import Button from "../../../components/Button";

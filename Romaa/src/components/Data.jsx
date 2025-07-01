@@ -6447,3 +6447,187 @@ export const collectionprojectionData =[
   }
 ]
 
+export const WORequestData = [
+  {
+    description: "Basement Level Contractor Work",
+    details: [
+      {
+        contractor: "ABC Constructions",
+        unitCost: 1200,
+        unit: "Cubic Meter",
+        date: "2025-06-01",
+        total: 24000,
+        level: "Basement",
+        creditDays: 30,
+      },
+      {
+        contractor: "XYZ Builders",
+        unitCost: 1500,
+        unit: "Cubic Meter",
+        date: "2025-06-05",
+        total: 30000,
+        level: "Basement",
+        creditDays: 45,
+      },
+    ],
+  },
+  {
+    description: "Ground Level Contractor Work",
+    details: [
+      {
+        contractor: "LMN Infra",
+        unitCost: 1100,
+        unit: "Cubic Meter",
+        date: "2025-06-10",
+        total: 22000,
+        level: "Ground",
+        creditDays: 60,
+      },
+      {
+        contractor: "OPQ Developers",
+        unitCost: 1300,
+        unit: "Cubic Meter",
+        date: "2025-06-15",
+        total: 26000,
+        level: "Ground",
+        creditDays: 30,
+      },
+    ],
+  },
+  {
+    description: "First Floor Contractor Work",
+    details: [
+      {
+        contractor: "RST Associates",
+        unitCost: 1400,
+        unit: "Cubic Meter",
+        date: "2025-06-20",
+        total: 28000,
+        level: "First Floor",
+        creditDays: 15,
+      },
+    ],
+  },
+];
+
+export const WOIssuancedata = [
+  {
+    contract: "ABC Constructions",
+    unitcost: 1200,
+    unit: "Cubic Meter",
+    date: "2025-06-01",
+    total: 24000,
+    level: "Basement",
+  },
+  {
+    contract: "XYZ Builders",
+    unitcost: 1500,
+    unit: "Cubic Meter",
+    date: "2025-06-05",
+    total: 30000,
+    level: "Ground",
+  },
+  {
+    contract: "LMN Infra",
+    unitcost: 1100,
+    unit: "Cubic Meter",
+    date: "2025-06-10",
+    total: 22000,
+    level: "First Floor",
+  },
+  {
+    contract: "OPQ Developers",
+    unitcost: 1300,
+    unit: "Cubic Meter",
+    date: "2025-06-15",
+    total: 26000,
+    level: "Second Floor",
+  },
+  {
+    contract: "RST Associates",
+    unitcost: 1400,
+    unit: "Cubic Meter",
+    date: "2025-06-20",
+    total: 28000,
+    level: "Terrace",
+  },
+];
+
+export const clientbillingProjectdata = [
+  {
+    invoiceno: "INV-1001",
+    particles: "Cement",
+    date: "2025-06-01",
+    duedate: "2025-06-10",
+    tax: 9000,
+    amount: 59000,
+  },
+  {
+    invoiceno: "INV-1002",
+    particles: "Steel",
+    date: "2025-06-03",
+    duedate: "2025-06-13",
+    tax: 13500,
+    amount: 88500,
+  },
+  {
+    invoiceno: "INV-1003",
+    particles: "Sand",
+    date: "2025-06-05",
+    duedate: "2025-06-15",
+    tax: 3600,
+    amount: 23600,
+  },
+  {
+    invoiceno: "INV-1004",
+    particles: "Bricks",
+    date: "2025-06-07",
+    duedate: "2025-06-17",
+    tax: 5400,
+    amount: 35400,
+  },
+];
+
+export const Projectworkprogressdata = [
+  {
+    datetime: "2025-06-01 09:00",
+    work: "Excavation",
+    manpower: 12,
+    machinery: 3,
+    actualplan: "100 m³",
+    completion: "90 m³",
+    variance: -10,
+    delayreason: "Rain delay",
+  },
+  {
+    datetime: "2025-06-02 10:00",
+    work: "Foundation",
+    manpower: 15,
+    machinery: 2,
+    actualplan: "80 m³",
+    completion: "80 m³",
+    variance: 0,
+    delayreason: "-",
+  },
+  {
+    datetime: "2025-06-03 11:00",
+    work: "Column Casting",
+    manpower: 10,
+    machinery: 2,
+    actualplan: "50 m³",
+    completion: "45 m³",
+    variance: -5,
+    delayreason: "Material shortage",
+  },
+  {
+    datetime: "2025-06-04 09:30",
+    work: "Brick Work",
+    manpower: 20,
+    machinery: 1,
+    actualplan: "2000 Nos",
+    completion: "2000 Nos",
+    variance: 0,
+    delayreason: "-",
+  },
+];
+

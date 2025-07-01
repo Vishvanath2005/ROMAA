@@ -103,7 +103,7 @@ const RetainingAbstract = () => {
                                             Total
                                           </td>
                                           <td className="py-2">
-                                            {`₹ ${detail.totalCost}`}
+                                               {`₹ ${data.total || data.details.reduce((acc, curr) => acc + (curr.costs || 0), 0)}`}
                                           </td>
                                         </tr>
                                       </>

@@ -121,6 +121,15 @@ import EditNMR from "../pages/Hr/nmr/EditNMR";
 import NMRattendance from "../pages/Hr/nmr_attendance/NMRattendance";
 import ViewTableReport from "../pages/reports/planned_vs_actual/table/ViewTableReport";
 import ViewCollectionProjection from "../pages/reports/collection_projection/ViewCollectionProjection";
+import WoIssuance from "../pages/projects/Wo issuance/WOIssuance";
+import ViewWORequest from "../pages/projects/Wo issuance/work order request/ViewWORequest";
+import ViewWOIssuance from "../pages/projects/Wo issuance/Work order issuance/ViewWOIssuance";
+import ClientBillingProject from "../pages/projects/client billing/ClientBillingProject";
+import ViewClBillProjects from "../pages/projects/client billing/ViewClBillProjects";
+import ProjectWorkProgress from "../pages/projects/work progress/ProjectWorkProgress";
+import ViewProjectWorkProgress from "../pages/projects/work progress/ViewProjectWorkProgress";
+import ProjectMaterailQty from "../pages/projects/Project Material quantity/ProjectMaterailQty";
+
 
 const AppRoutes = () => {
   return (
@@ -138,7 +147,7 @@ const AppRoutes = () => {
               <Route path="tickets" element={<Tickets />} />
               <Route path="profile" element={<Profile />} />
             </Route>
-            <Route path="/tender">
+           <Route path="/tender">
               <Route path="customers" element={<Customer />} />
               <Route path="tenders">
                 <Route index element={<Tender />} />
@@ -146,11 +155,11 @@ const AppRoutes = () => {
               </Route>
               <Route path="workorders">
                 <Route index element={<WorkOrder />} />
-                <Route path="viewworkorder" element={<ViewWorkOrder />} />
+                <Route path="viewworkorder" element = {<ViewWorkOrder/>}/>
               </Route>
               <Route path="emd" element={<EMD />} />
               <Route path="dlp" element={<DLP />} />
-              <Route path="securitydeposit" element={<SecurityDeposit />} />
+              <Route path="securitydeposit" element={<SecurityDeposit/>} />
               <Route path="projectpenalty" element={<ProjectPenalty />} />
             </Route>
             <Route path="/projects">
@@ -174,12 +183,13 @@ const AppRoutes = () => {
                 />
                 <Route
                   path="viewretainingabstract"
-                  element={<ViewRetainingAbstract />}
+                  element={<ViewRetainingAbstract/>}
                 />
-                <Route
+                     <Route
                   path="viewvendorproject"
-                  element={<ViewVendorProject />}
+                  element={<ViewVendorProject/>}
                 />
+
               </Route>
               <Route path="drawingboq">
                 <Route index element={<DrawingBoq />} />
@@ -189,29 +199,34 @@ const AppRoutes = () => {
                 <Route index element={<WBS />} />
                 <Route path="viewwbs" element={<ViewWbs />} />
               </Route>
-            </Route>
-            <Route path="/purchase">
-              <Route path="vendorsupplier">
-                <Route index element={<VendorSupplier />} />
-                <Route
-                  path="viewvendorsupplier"
-                  element={<ViewVendorSupplier />}
-                />
+                   <Route path="woissuance">
+                <Route index element={<WoIssuance />} />
+             <Route path="viewworequest" element={<ViewWORequest/>}/>
+             <Route path="viewwoissuance" element={<ViewWOIssuance/>}/>
               </Route>
-              <Route path="request">
-                <Route index element={<PurchaseRequest />} />
-                <Route
-                  path="viewpurchaserequest"
-                  element={<ViewPurchaseRequest />}
-                />
+                 <Route path="clientbillingprojects">
+                <Route index element={<ClientBillingProject />} />
+             <Route path="viewclbillproject" element={<ViewClBillProjects/>}/>
+              </Route>
+                 <Route path="workprogressprojects">
+                <Route index element={<ProjectWorkProgress />} />
+             <Route path="viewprojectworkprogress" element={<ViewProjectWorkProgress/>}/>
+              </Route>
+                <Route path="projectsmaterialquantity" element={<ProjectMaterailQty/>}/>
+            </Route>
+           <Route path="/purchase">
+              <Route path="vendorsupplier"  >
+              <Route index element={<VendorSupplier />}/>
+              <Route path="viewvendorsupplier" element={<ViewVendorSupplier/>}/>
+              </Route>
+              <Route path="request" >
+              <Route index  element={<PurchaseRequest />}/>
+              <Route path="viewpurchaserequest" element={<ViewPurchaseRequest/>}/>
               </Route>
               <Route path="enquiry" element={<PurchaseEnquiry />} />
-              <Route path="order">
-                <Route index element={<PurchaseOrder />} />
-                <Route
-                  path="viewpurchaseorder"
-                  element={<ViewPurchaseOrder />}
-                />
+              <Route path="order" >
+              <Route index element={<PurchaseOrder />} />
+              <Route path="viewpurchaseorder" element={<ViewPurchaseOrder/>}/>
               </Route>
               <Route path="goodsreceipt" element={<GoodsReceipt />} />
               <Route path="bill" element={<PurchaseBill />} />
