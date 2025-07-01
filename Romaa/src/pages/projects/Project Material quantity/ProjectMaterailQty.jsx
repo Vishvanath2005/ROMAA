@@ -9,11 +9,14 @@ const Columns = [
   { label: "Amount", key: "amount" },
   { label: "Materials", key: "materials" },
   { label: "Machinery", key: "machinery" },
-  {
-    label: "Fuel",
-    key: "fuel",
-    render: (item) => <span>{`₹ ${item.fuel}`}</span>,
-  },
+ {
+  label: "Fuel",
+  key: "fuel",
+  render: (item) =>
+    item.fuel !== undefined && item.fuel !== null && item.fuel !== ""
+      ? <span>₹{item.fuel}</span>
+      : <span>-</span>,
+},
 ];
 
 const ProjectMaterailQty = () => {

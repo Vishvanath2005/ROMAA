@@ -9,17 +9,14 @@ const Columns = [
   { label: "Amount", key: "amount" },
   { label: "Materials", key: "materials" },
   { label: "Machinery", key: "machinery" },
-  {
-    label: "Fuel",
-    key: "fuel",
-    render: (item) => (
-      <span
-        className={` ${item.varqty < 0 ? "text-red-500 font-semibold" : ""}`}
-      >
-        {`₹ ${item.fuel}`}
-      </span>
-    ),
-  },
+{
+  label: "Fuel",
+  key: "fuel",
+  render: (item) =>
+    item.fuel !== undefined && item.fuel !== null && item.fuel !== ""
+      ? <span>₹{item.fuel}</span>
+      : <span>-</span>,
+},
 ];
 
 const BOQSplit = () => {

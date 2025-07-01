@@ -2382,6 +2382,7 @@ export const BOQSplitData = [
     unit: "Tons",
     rate: 850,
     amount: 12750,
+    fuel:12
   },
   {
     itemdesc: "Bricks",
@@ -2389,6 +2390,7 @@ export const BOQSplitData = [
     unit: "Nos",
     rate: 6,
     amount: 3000,
+    fuel:12
   },
   {
     itemdesc: "Steel Rods",
@@ -2396,6 +2398,7 @@ export const BOQSplitData = [
     unit: "Kg",
     rate: 75,
     amount: 3750,
+    fuel:12
   },
   {
     itemdesc: "Concrete Mix",
@@ -2403,6 +2406,7 @@ export const BOQSplitData = [
     unit: "Cubic Meters",
     rate: 1200,
     amount: 12000,
+    fuel:12
   },
 ];
 

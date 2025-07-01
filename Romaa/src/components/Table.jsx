@@ -27,7 +27,6 @@ const Table = ({
   deletetitle,
   FilterModal,
   exportModal = true,
-  active_title,
   title,
   subtitle,
   pagetitle,
@@ -63,6 +62,7 @@ const Table = ({
     setCurrentPage(1);
   };
 
+  // Sorting logic
   const sortedItems = useMemo(() => {
     let sortableItems = [...endpoint];
 
@@ -82,12 +82,7 @@ const Table = ({
   return (
     <div className="font-roboto-flex flex flex-col h-full">
       <div className="lg:flex lg:justify-between">
-        <Title
-          title={title}
-          sub_title={subtitle}
-          active_title={active_title}
-          page_title={pagetitle}
-        />
+        <Title title={title} sub_title={subtitle} page_title={pagetitle} />
         <div className="my-2 flex flex-wrap items-center gap-2">
           {Datecontent && (
             <p className="font-semibold ">
@@ -213,6 +208,16 @@ const Table = ({
                         editroutepoint;
                       const addRightRadius = isLastColumn && !hasAction;
 
+                     const cellValue = col.render
+                        ? col.render(item)
+                        : item[col.key];
+                      const isEmpty =
+                        cellValue === null ||
+                        cellValue === undefined ||
+                        cellValue === "" ||
+                        (typeof cellValue === "string" &&
+                          cellValue.trim().toLowerCase() === "undefined");
+                      const displayValue = isEmpty ? "-" : cellValue;
                       return (
                         <td
                           key={col.key}
@@ -220,7 +225,7 @@ const Table = ({
                             addRightRadius ? "rounded-r-lg" : ""
                           }`}
                         >
-                          {col.render ? col.render(item) : item[col.key]}
+                          {displayValue}
                         </td>
                       );
                     })}
@@ -270,7 +275,6 @@ const Table = ({
                             <LuEye size={14} className="text-[#008000]" />
                           </button>
                         )}
-
                         {DeleteModal && (
                           <button
                             onClick={() => {

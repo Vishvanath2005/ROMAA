@@ -10,7 +10,7 @@ const Title = ({title, sub_title,page_title,active_title}) => {
           {active_title && ` / ${active_title}`}
         </p>
         <p className="text-xl  font-semibold ">
-          {page_title} 
+          {page_title} {active_title}
         </p>
       </div>
     </div>
